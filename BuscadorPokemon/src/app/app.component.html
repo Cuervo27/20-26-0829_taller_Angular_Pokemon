@@ -1,81 +1,12 @@
-<main class="page">
-  <header class="header">
-    <div class="brand">
-      <span class="pokeball" aria-hidden="true"></span>
-      <h1>Pokedex</h1>
-    </div>
-    <p class="subtitle">Busca cualquier Pokemon por nombre o numero usando la PokeAPI.</p>
-  </header>
+<header>
+  <h1>{{titulo}}</h1>
 
-  <form class="search" (ngSubmit)="search()">
-    <input
-      type="text"
-      name="query"
-      [(ngModel)]="query"
-      placeholder="Ej: pikachu, charizard o 25"
-      autocomplete="off"
-      aria-label="Nombre o numero del Pokemon"
-    />
-    <button type="submit" [disabled]="loading">
-      {{ loading ? 'Buscando...' : 'Buscar' }}
-    </button>
-  </form>
+  <nav>
+    <li><a routerLink="/registro" routerLinkActiveActive">Registro de usuario</a></li>
+    <li><a routerLink="/buscador" routerLinkActiveActive">Buscador de Pokemon</a></li>
+  </nav>
 
-  <section class="results" aria-live="polite">
-    <p *ngIf="loading" class="state">Cargando Pokemon...</p>
-
-    <p *ngIf="error && !loading" class="state error">{{ error }}</p>
-
-    <article *ngIf="pokemon && !loading" class="card">
-      <div class="card-top">
-        <span class="card-id">{{ formatId(pokemon.id) }}</span>
-        <div class="image-wrap">
-          <img
-            *ngIf="pokemon.image"
-            [src]="pokemon.image"
-            [alt]="'Imagen de ' + pokemon.name"
-            loading="lazy"
-          />
-        </div>
-        <h2 class="card-name">{{ pokemon.name }}</h2>
-        <div class="types">
-          <span
-            *ngFor="let type of pokemon.types"
-            class="type"
-            [style.background-color]="typeColor(type)"
-          >
-            {{ type }}
-          </span>
-        </div>
-      </div>
-
-      <div class="card-body">
-        <div class="measures">
-          <div class="measure">
-            <span class="measure-label">Altura</span>
-            <span class="measure-value">{{ pokemon.height }} m</span>
-          </div>
-          <div class="measure">
-            <span class="measure-label">Peso</span>
-            <span class="measure-value">{{ pokemon.weight }} kg</span>
-          </div>
-        </div>
-
-        <div class="stats">
-          <h3>Estadisticas base</h3>
-          <div class="stat" *ngFor="let stat of pokemon.stats">
-            <span class="stat-name">{{ statLabel(stat.name) }}</span>
-            <span class="stat-value">{{ stat.value }}</span>
-            <div class="stat-bar">
-              <div class="stat-fill" [style.width.%]="statPercent(stat.value)"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <p *ngIf="!pokemon && !loading && !error" class="state hint">
-      Escribe un nombre y pulsa Buscar para empezar.
-    </p>
-  </section>
-</main>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</header>
