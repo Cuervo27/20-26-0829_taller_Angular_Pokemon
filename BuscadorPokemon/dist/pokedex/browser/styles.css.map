@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/styles.css"],
-  "sourcesContent": [":root {\n  --background: #0f1117;\n  --surface: #1a1d29;\n  --surface-2: #232735;\n  --border: #2e3345;\n  --foreground: #f4f5f7;\n  --muted: #9aa0b0;\n  --primary: #ee1515;\n  --primary-dark: #c20d0d;\n  --accent: #ffcb05;\n  --radius: 16px;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nhtml,\nbody {\n  height: 100%;\n}\n\nbody {\n  background-color: var(--background);\n  color: var(--foreground);\n  font-family: 'Inter', system-ui, sans-serif;\n  line-height: 1.5;\n  -webkit-font-smoothing: antialiased;\n}\n\nh1,\nh2,\nh3,\nh4 {\n  font-family: 'Poppins', system-ui, sans-serif;\n  line-height: 1.2;\n}\n\nbutton {\n  font-family: inherit;\n  cursor: pointer;\n}\n\ninput {\n  font-family: inherit;\n}\n"],
-  "mappings": ";AAAA;AACE,gBAAc;AACd,aAAW;AACX,eAAa;AACb,YAAU;AACV,gBAAc;AACd,WAAS;AACT,aAAW;AACX,kBAAgB;AAChB,YAAU;AACV,YAAU;AACZ;AAEA;AACE,cAAY;AACZ,UAAQ;AACR,WAAS;AACX;AAEA;AACA;AACE,UAAQ;AACV;AAEA;AACE,oBAAkB,IAAI;AACtB,SAAO,IAAI;AACX;AAAA,IAAa,OAAO;AAAA,IAAE,SAAS;AAAA,IAAE;AACjC,eAAa;AACb,0BAAwB;AAC1B;AAEA;AACA;AACA;AACA;AACE;AAAA,IAAa,SAAS;AAAA,IAAE,SAAS;AAAA,IAAE;AACnC,eAAa;AACf;AAEA;AACE,eAAa;AACb,UAAQ;AACV;AAEA;AACE,eAAa;AACf;",
-  "names": []
-}
